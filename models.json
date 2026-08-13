@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": "mercury-2",
+      "name": "Inception: Mercury 2",
+      "description": "Mercury is the first diffusion large language model (dLLM). 5-10x faster than Claude 3.5 Haiku and GPT-4o Mini while matching their performance.",
+      "context_length": 128000,
+      "max_output_length": 50000,
+      "supported_features": ["tools", "json_mode", "structured_outputs"],
+      "supported_sampling_parameters": ["temperature", "stop"],
+      "pricing": {
+        "prompt": "0.00000025",
+        "completion": "0.00000075",
+        "input_cache_reads": "0.000000025",
+        "input_cache_writes": "0"
+      }
+    }
+  ]
+}
