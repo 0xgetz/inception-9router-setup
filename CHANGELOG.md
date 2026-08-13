@@ -5,6 +5,8 @@ All notable changes to **Inception Labs × 9Router Setup** are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+> **Official reference:** [Inception Labs — Get Started](https://docs.inceptionlabs.ai/get-started/get-started)
+
 ---
 
 ## [1.0.0] - 2026-08-13
@@ -13,7 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 #### ✨ Added
 - **`setup.py`** — One-command setup script
-  - Auto-fetches model list from Inception Labs API
+  - Auto-fetches model list from Inception Labs API (`/v1/models`)
   - Auto-generates unique Node ID (`openai-compatible-chat-<uuid8>`)
   - Injects `providerNodes` + `providerConnections` into 9Router SQLite DB
   - Registers models in `kv` table for routing
@@ -23,25 +25,29 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
   - Tests direct Inception API as fallback
   - Usage: `./test.sh <9ROUTER_KEY> [NODE_ID]`
 - **`models.json`** — Model metadata reference
-  - Mercury-2: 128K context, 50K max output
-  - Pricing: $0.25/$0.75 per 1M tokens
-  - Features: tools, json_mode, structured_outputs
-- **`README.md`** — Multilingual documentation
-  - 🇺🇸 English (default)
-  - 🇮🇩 Bahasa Indonesia
-  - 🇨🇳 中文
-  - 🇯🇵 日本語
-  - 🇰🇷 한국어
-  - 6 professional badges
-  - Model comparison table
-  - Architecture diagram
+- **`README.md`** — Multilingual documentation (EN, ID, ZH, JA, KO)
 - **`LICENSE`** — MIT License (© 0xgetz 2026)
+
+#### 📚 Aligned with Official Inception Docs
+Based on [Get Started](https://docs.inceptionlabs.ai/get-started/get-started):
+
+- **Base URL:** `https://api.inceptionlabs.ai/v1` (all requests)
+- **Auth Header:** `Authorization: Bearer $INCEPTION_API_KEY`
+- **SDK:** `pip install inceptionai` / `npm install inceptionai`
+- **Free Tier:** Every new account gets **100M free tokens** — no payment required
+- **Recommended Defaults** (per docs):
+  - `model`: `mercury-2`
+  - `temperature`: `0.75`
+  - `reasoning_effort`: `medium`
+  - `max_tokens`: `8192`
+- **Reasoning Levels:** `instant` (ultra-low latency) → `low` → `medium` → `high` (extended thinking)
+- **Third-Party Compatible:** AISuite, LiteLLM, LangChain, OpenAI Client, VercelAI
 
 #### 🔧 Technical Details
 - **Provider type:** `openai-compatible` (matches 9Router pattern)
-- **API base:** `https://api.inceptionlabs.ai/v1`
 - **Model:** `mercury-2` (diffusion LLM, 5-10× faster than GPT-4o Mini)
-- **Auth:** Bearer token (`sk_...`)
+- **Context:** 128K | **Max output:** 50K
+- **Pricing:** $0.25 input / $0.75 output per 1M tokens
 - **No dashboard restart required** — DB write only
 
 #### 📋 Repository Config
@@ -53,15 +59,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## 🔮 Roadmap
 
 ### [1.1.0] - Planned
-- [ ] Support for **mercury-coder** (code-specialized variant)
+- [ ] Sync defaults to official docs (`reasoning_effort: medium`, `temperature: 0.75`)
+- [ ] Support **mercury-coder** (code-specialized variant)
 - [ ] Multi-provider batch setup (loop through config)
 - [ ] Interactive mode with model picker
 - [ ] Dry-run flag (`--dry-run`)
-- [ ] Webhook notification on model errors
 
 ### [1.2.0] - Future
 - [ ] Docker Compose setup (9Router + this tool)
-- [ ] Support for streaming responses (`stream=true`)
+- [ ] Streaming + diffusion instant mode (`reasoning_effort: instant`)
 - [ ] Cost calculator (tokens → USD)
 - [ ] Health check endpoint integration
 
