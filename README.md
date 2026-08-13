@@ -33,9 +33,16 @@ Mercury-2 is the world's first **diffusion Large Language Model (dLLM)** — 5-1
 
 ## ⚡ Quick Start
 
+### 🆕 New to Inception Labs?
+
+Create a free account (100M free tokens, no payment required): **[https://platform.inceptionlabs.ai](https://platform.inceptionlabs.ai)**
+
+1. Sign up → get free tokens
+2. Go to **API Keys** → create new key → copy `sk_...`
+
 ```bash
 # 1. Get API key from Inception Labs
-#    Sign up at https://inceptionlabs.ai → Dashboard → API Keys → Copy sk_...
+#    Sign up at https://platform.inceptionlabs.ai → Dashboard → API Keys → Copy sk_...
 
 # 2. Clone & run
 git clone https://github.com/0xgetz/inception-9router-setup.git
@@ -144,8 +151,11 @@ inception-9router-setup/
 **Bahasa Indonesia**
 
 ```bash
+# 🆕 Pengguna baru? Daftar gratis (100M token gratis):
+#    https://platform.inceptionlabs.ai
+
 # 1. Dapat API key dari Inception Labs
-#    Daftar di https://inceptionlabs.ai → Dashboard → API Keys → Copy sk_...
+#    Daftar di https://platform.inceptionlabs.ai → Dashboard → API Keys → Copy sk_...
 
 # 2. Clone & jalankan
 git clone https://github.com/0xgetz/inception-9router-setup.git
@@ -177,8 +187,11 @@ curl http://localhost:20128/v1/chat/completions \
 **中文**
 
 ```bash
+# 🆕 新用户？免费注册（100M 免费 token）：
+#    https://platform.inceptionlabs.ai
+
 # 1. 从 Inception Labs 获取 API 密钥
-#    注册 https://inceptionlabs.ai → 控制台 → API Keys → 复制 sk_...
+#    注册 https://platform.inceptionlabs.ai → 控制台 → API Keys → 复制 sk_...
 
 # 2. 克隆并运行
 git clone https://github.com/0xgetz/inception-9router-setup.git
@@ -210,8 +223,11 @@ curl http://localhost:20128/v1/chat/completions \
 **日本語**
 
 ```bash
+# 🆕 新規ユーザー？無料登録（100M 無料トークン）：
+#    https://platform.inceptionlabs.ai
+
 # 1. Inception Labs から API キーを取得
-#    https://inceptionlabs.ai → ダッシュボード → API Keys → sk_... をコピー
+#    https://platform.inceptionlabs.ai → ダッシュボード → API Keys → sk_... をコピー
 
 # 2. クローンして実行
 git clone https://github.com/0xgetz/inception-9router-setup.git
@@ -243,8 +259,11 @@ curl http://localhost:20128/v1/chat/completions \
 **한국어**
 
 ```bash
+# 🆕 신규 사용자? 무료 가입 (100M 무료 토큰):
+#    https://platform.inceptionlabs.ai
+
 # 1. Inception Labs에서 API 키 가져오기
-#    https://inceptionlabs.ai → 대시보드 → API Keys → sk_... 복사
+#    https://platform.inceptionlabs.ai → 대시보드 → API Keys → sk_... 복사
 
 # 2. 클론 후 실행
 git clone https://github.com/0xgetz/inception-9router-setup.git
